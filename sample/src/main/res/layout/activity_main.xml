@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="16dp"
+  tools:context="jp.co.cyberagent.android.tabanimationsample.MainActivity"
+  >
+
+  <Button
+    android:id="@+id/text_tab"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:text="Text Tab"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+    />
+
+  <Button
+    android:id="@+id/icon_tab"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:text="Icon Tab"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+    />
+
+  <Button
+    android:id="@+id/text_top_icon_tab"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:text="Text Top Icon Tab"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+    />
+
+  <Button
+    android:id="@+id/text_leading_icon_tab"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:text="Text Leading Icon Tab"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+    />
+
+  <Button
+    android:id="@+id/text_top_icon_tab_2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:text="Text Top Icon Tab 2"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+    />
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+  compileSdkVersion compile_sdk_version
+
+  defaultConfig {
+    minSdkVersion min_sdk_version
+    targetSdkVersion target_sdk_version
+    versionCode version_code
+    versionName version_name
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    consumerProguardFiles 'consumer-rules.pro'
+
+    archivesBaseName = "$archivesBaseName-$versionName"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+  implementation "androidx.appcompat:appcompat:$appcompat_version"
+  implementation "androidx.core:core-ktx:$core_version"
+  implementation "com.google.android.material:material:$material_version"
+  testImplementation 'junit:junit:4.12'
+  androidTestImplementation 'androidx.test:runner:1.2.0'
+  androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+publish {
+  bintrayUser = project.hasProperty('bintrayUser') ? bintrayUser : ''
+  bintrayKey = project.hasProperty('bintrayKey') ? bintrayKey : ''
+  userOrg = 'cats-oss'
+  groupId = 'jp.co.cyberagent.android'
+  artifactId = 'tab-animation'
+  publishVersion = version_name
+  desc = 'Easily create TabLayout.Tab animations that sync with the scrolling progress of ViewPager'
+  website = 'todo'
+}
