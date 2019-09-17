@@ -43,5 +43,5 @@ publish {
   artifactId = 'tab-animation'
   publishVersion = version_name
   desc = 'Easily create TabLayout.Tab animations that sync with the scrolling progress of ViewPager'
-  website = 'todo'
+  website = 'https://github.com/cats-oss/android-tab-animation'
 }
