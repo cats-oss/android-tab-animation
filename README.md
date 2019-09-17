@@ -20,7 +20,7 @@ Easily create `TabLayout.Tab` animations that sync with the scrolling progress o
 ### Gradle
 
 ```gradle
-implementation 'jp.co.cyberagent.android.tab-animation:x.y.z'
+implementation 'jp.co.cyberagent.android:tab-animation:x.y.z'
 
 ```
 
