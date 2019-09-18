@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Download](https://api.bintray.com/packages/cats-oss/maven/tab-animation/images/download.svg) ](https://bintray.com/cats-oss/maven/tab-animation/_latestVersion)
+![CI](https://github.com/cats-oss//android-tab-animation/workflows/Android%20CI/badge.svg)
 
 Easily create `TabLayout.Tab` animations that sync with the scrolling progress of `ViewPager`.
 
