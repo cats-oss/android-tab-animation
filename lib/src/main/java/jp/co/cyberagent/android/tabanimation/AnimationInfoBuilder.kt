@@ -40,7 +40,7 @@ class AnimationInfoBuilder<T : View, V> internal constructor() {
     startValue { value }
   }
 
-  fun startValue(value: (View) -> V) {
+  fun startValue(value: (root: View) -> V) {
     startViewValue = value
   }
 
@@ -48,7 +48,7 @@ class AnimationInfoBuilder<T : View, V> internal constructor() {
     endValue { value }
   }
 
-  fun endValue(value: (View) -> V) {
+  fun endValue(value: (root: View) -> V) {
     endViewValue = value
   }
 
@@ -56,7 +56,7 @@ class AnimationInfoBuilder<T : View, V> internal constructor() {
     keyFrame(fraction) { value }
   }
 
-  fun keyFrame(@FloatRange(from = 0.0, to = 1.0) fraction: Float, value: (View) -> V) {
+  fun keyFrame(@FloatRange(from = 0.0, to = 1.0) fraction: Float, value: (root: View) -> V) {
     keyFrames.add(fraction to value)
   }
 
