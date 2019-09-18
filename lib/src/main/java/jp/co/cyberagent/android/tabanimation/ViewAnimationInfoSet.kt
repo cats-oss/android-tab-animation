@@ -12,7 +12,7 @@ internal class ViewAnimationInfoSet(
 
   fun startAnimation(forward: Boolean) {
     infoSet.forEach {
-      it.animate(forward)
+      it.startAnimation(forward)
     }
   }
 }

@@ -35,7 +35,7 @@ internal class ViewAnimationInfo<V : View, T>(
     }
   }
 
-  fun animate(forward: Boolean) {
+  fun startAnimation(forward: Boolean) {
     root.get()?.ensureLaidOut {
       if (forward) {
         animator.interpolator = interpolator
