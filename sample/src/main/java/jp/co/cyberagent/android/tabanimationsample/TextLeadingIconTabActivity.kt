@@ -55,8 +55,9 @@ class TextLeadingIconTabActivity : BaseActivity() {
       }
       animateIcon<Float> {
         property(View.TRANSLATION_X)
-        startValue {
-          it.width / 2f
+        startValue { root ->
+          val icon = SimpleTab.icon(root)!!
+          root.width / 2f - icon.width / 2f
         }
         endValue { 0f }
       }
