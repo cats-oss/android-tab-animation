@@ -6,6 +6,7 @@ import android.animation.PropertyValuesHolder
 import android.animation.TimeInterpolator
 import android.os.Build
 import android.view.View
+import androidx.core.view.OneShotPreDrawListener
 import androidx.core.view.ViewCompat
 import androidx.core.view.doOnPreDraw
 import java.lang.ref.WeakReference
@@ -25,6 +26,7 @@ internal class ViewAnimationInfo<V : View, T>(
   private val animator by lazy(LazyThreadSafetyMode.NONE) {
     createAnimator()
   }
+  private var preDrawListener: OneShotPreDrawListener? = null
 
   fun updateProperty(fraction: Float) {
     root.get()?.ensureLaidOut {
@@ -33,7 +35,7 @@ internal class ViewAnimationInfo<V : View, T>(
     }
   }
 
-  fun animate(forward: Boolean) {
+  fun startAnimation(forward: Boolean) {
     root.get()?.ensureLaidOut {
       if (forward) {
         animator.interpolator = interpolator
@@ -46,10 +48,11 @@ internal class ViewAnimationInfo<V : View, T>(
   }
 
   private fun View.ensureLaidOut(action: () -> Unit) {
-    if (ViewCompat.isLaidOut(this)) {
+    preDrawListener?.removeListener()
+    if (ViewCompat.isLaidOut(this) && !isLayoutRequested) {
       action()
     } else {
-      doOnPreDraw { action() }
+      preDrawListener = doOnPreDraw { action() }
     }
   }
 

@@ -22,13 +22,9 @@ class AnimationTabManager internal constructor(
   private val adapterDataObserver =
     ViewPagerAdapterDataSetObserver(this)
   private val adapterChangeListenerForSetup =
-    ViewPagerOnAdapterChangeSetupListener(
-      this
-    )
+    ViewPagerOnAdapterChangeSetupListener(this)
   private val adapterChangeListenerForDataObserver =
-    ViewPagerOnAdapterChangeForDataObserverListener(
-      this
-    )
+    ViewPagerOnAdapterChangeForDataObserverListener(this)
   private val pageChangeListener =
     ViewPagerOnPageChangeListener(this)
   private val tabSelectedListener =
