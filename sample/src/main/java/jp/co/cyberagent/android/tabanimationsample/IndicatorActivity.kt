@@ -35,7 +35,7 @@ class IndicatorActivity : AppCompatActivity() {
       override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) =
         with(holder.itemView) {
           setBackgroundColor(Color.parseColor("#141418"))
-          text_view.text = "Page $position"
+          text_view.text = "Page ${position + 1}"
           text_view.setTextColor(Color.WHITE)
         }
     }
