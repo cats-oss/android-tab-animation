@@ -17,7 +17,7 @@ Easily create `TabLayout.Tab` animations that sync with the scrolling progress o
 
 |[Tab](sample/src/main/java/jp/co/cyberagent/android/tabanimationsample/TextTabActivity.kt)|[Indicator](sample/src/main/java/jp/co/cyberagent/android/tabanimationsample/IndicatorActivity.kt)|[Bottom Navigation](sample/src/main/java/jp/co/cyberagent/android/tabanimationsample/BottomNavigationActivity.kt)|
 |-|-|-|
-|<img src=art/demo.gif width=600 />|<img src=art/demo_indicator.gif width=600 />|<img src=art/demo_bottom_navigation.gif width=600 />|
+|<img src=art/demo_tab.gif width=600 />|<img src=art/demo_indicator.gif width=600 />|<img src=art/demo_bottom_navigation.gif width=600 />|
 
 ## Usage
 
