@@ -11,6 +11,10 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
+    button_sample_indicator.setOnClickListener {
+      startActivity(Intent(this, IndicatorActivity::class.java))
+    }
+
     text_tab.setOnClickListener {
       startActivity(Intent(this, TextTabActivity::class.java))
     }
