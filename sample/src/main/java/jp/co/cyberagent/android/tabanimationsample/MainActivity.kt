@@ -15,6 +15,10 @@ class MainActivity : AppCompatActivity() {
       startActivity(Intent(this, IndicatorActivity::class.java))
     }
 
+    button_sample_bottom_navigation.setOnClickListener {
+      startActivity(Intent(this, BottomNavigationActivity::class.java))
+    }
+
     text_tab.setOnClickListener {
       startActivity(Intent(this, TextTabActivity::class.java))
     }
