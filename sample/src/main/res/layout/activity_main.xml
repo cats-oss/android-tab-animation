@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
-  android:orientation="vertical"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:orientation="vertical"
   android:padding="16dp"
   tools:context="jp.co.cyberagent.android.tabanimationsample.MainActivity"
   >
+
+  <Button
+    android:id="@+id/button_sample_indicator"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:text="Indicator"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+    />
+
+  <Button
+    android:id="@+id/button_sample_bottom_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:text="Bottom Navigation"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+    />
 
   <Button
     android:id="@+id/text_tab"

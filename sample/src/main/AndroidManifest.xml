@@ -26,6 +26,8 @@
     <activity android:name=".TextTopIconTabActivity" />
     <activity android:name=".TextLeadingIconTabActivity" />
     <activity android:name=".TextTopIconTab2Activity" />
+    <activity android:name=".IndicatorActivity" />
+    <activity android:name=".BottomNavigationActivity" />
   </application>
 
 </manifest>
