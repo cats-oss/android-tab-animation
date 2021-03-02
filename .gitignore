@@ -63,3 +63,5 @@ fastlane/readme.md
 # NDK
 .externalNativeBuild
 .cxx
+
+release/*
