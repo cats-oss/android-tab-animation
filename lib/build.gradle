@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'com.novoda.bintray-release'
+apply plugin: "com.vanniktech.maven.publish"
 
 android {
   compileSdkVersion compile_sdk_version
@@ -33,15 +33,4 @@ dependencies {
   testImplementation 'junit:junit:4.13'
   androidTestImplementation 'androidx.test:runner:1.2.0'
   androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-}
-
-publish {
-  bintrayUser = project.hasProperty('bintrayUser') ? bintrayUser : ''
-  bintrayKey = project.hasProperty('bintrayKey') ? bintrayKey : ''
-  userOrg = 'cats-oss'
-  groupId = 'jp.co.cyberagent.android'
-  artifactId = 'tab-animation'
-  publishVersion = version_name
-  desc = 'Easily create TabLayout.Tab animations that sync with the scrolling progress of ViewPager'
-  website = 'https://github.com/cats-oss/android-tab-animation'
 }
